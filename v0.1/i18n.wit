@@ -11,21 +11,21 @@ interface i18n {
     /// The localized string, falling back to English or the key itself.
     translate: func(key: string, locale: locale) -> string;
 
-    /// Formats a translation with positional arguments.
-    ///
-    /// Supports the same placeholder syntax as the underlying engine:
-    /// `%s`, `%1$s`, `{}`, `{name}`, `%%` (literal percent).
-    ///
-    /// # Arguments
-    /// * `key`: The namespaced translation key (e.g. `pumpkin:my_key`).
-    /// * `args`: Positional substitution values.
-    /// * `locale`: The target locale.
-    ///
-    /// # Returns
-    /// The formatted localized string.
-    format: func(key: string, args: list<string>, locale: locale) -> string;
+  /// Formats a translation with positional arguments.
+  ///
+  /// Supports the same placeholder syntax as the underlying engine:
+  /// `%s`, `%1$s`, `{}`, `{name}`, `%%` (literal percent).
+  ///
+  /// # Arguments
+  /// * `key`: The namespaced translation key (e.g. `pumpkin:my_key`).
+  /// * `args`: Positional substitution values.
+  /// * `locale`: The target locale.
+  ///
+  /// # Returns
+  /// The formatted localized string.
+  format: func(key: string, args: list<string>, locale: locale) -> string;
 
-    /// Loads custom translations from a JSON string.
+  /// Loads custom translations from a JSON string.
     ///
     /// # Arguments
     /// * `namespace`: The namespace to associate these keys with.
