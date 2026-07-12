@@ -1,6 +1,6 @@
 interface server {
     use player.{player};
-    use common.{game-mode};
+    use common.{game-mode, locale};
     use %world.{%world};
     use text.{text-component};
     use uuid.{uuid};
@@ -115,6 +115,12 @@ interface server {
 
         /// Returns the server's default gamemode.
         get-default-gamemode: func() -> game-mode;
+
+        /// Returns the server's configured global locale (e.g. `en-us`, `zh-cn`).
+        ///
+        /// This is the fallback locale used for console output, command block
+        /// messages, and any context without a specific player locale.
+        get-server-locale: func() -> locale;
 
         /// Returns the recipe manager to register custom recipes.
         get-recipe-manager: func() -> recipe-manager;

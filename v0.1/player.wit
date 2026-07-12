@@ -564,7 +564,7 @@ interface player {
         /// Changes the player's game mode. Returns true if successful.
         set-gamemode: func (mode: game-mode) -> bool;
         /// Returns the player's locale (e.g., \"en_us\").
-        get-locale: func () -> string;
+        get-player-locale: func () -> string;
         /// Returns the player's current ping in milliseconds.
         get-ping: func () -> u32;
 
